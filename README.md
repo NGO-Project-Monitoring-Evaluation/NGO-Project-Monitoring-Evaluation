@@ -3,11 +3,11 @@
 
 A web-based platform designed to help Non-Governmental Organizations (NGOs) manage projects, monitor activities, track beneficiaries, measure performance indicators, manage finances, and generate reports from a centralized system.
 
-##Overview
+## Overview
 
 The NGO Project Monitoring and Evaluation System is a web-based application developed to improve how NGOs plan, implement, monitor, evaluate and report on development projects. The system brings programme operations and financial management together, enabling organizations to monitor project implementation alongside budgets, donor funds, expenditures and commitments. It provides role-based access to ensure that users can access the information and functions relevant to their responsibilities.
 
-##Key Features
+## Key Features
   1. Project Management
   2. Activity Management
   3. Beneficiary Management
@@ -28,7 +28,7 @@ The application is built using the following technologies:
 | JavaScript 
 | Bootstrap 
 
-##System Architecture
+## System Architecture
 
 The application follows a three-tier client-server architecture:
 1. **Presentation Layer:** The web interface accessed through a browser.
