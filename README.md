@@ -1,5 +1,5 @@
 
-# NGO Project Monitoring and Evaluation System
+ NGO Project Monitoring and Evaluation System
 
 A web-based platform designed to help Non-Governmental Organizations (NGOs) manage projects, monitor activities, track beneficiaries, measure performance indicators, manage finances, and generate reports from a centralized system.
 
@@ -28,7 +28,7 @@ The application is built using the following technologies:
 | JavaScript 
 | Bootstrap 
 
-## System Architecture
+ System Architecture
 
 The application follows a three-tier client-server architecture:
 1. **Presentation Layer:** The web interface accessed through a browser.
