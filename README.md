@@ -21,7 +21,7 @@ Key Features
    Technology Stack
 The application is built using the following technologies:
 
-| PHP
+  PHP
 | MySQL
 | HTML5 
 | CSS3 
