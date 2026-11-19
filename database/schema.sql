@@ -1,7 +1,3 @@
--- NGO Project Monitoring and Evaluation System
--- Database structure (Chapter Three, Section 3.8). Works on MySQL 5.7+, MySQL 8 and MariaDB 10.3+.
--- The installer (install.php) runs this file for you. To import it by hand,
--- create an empty database, select it in phpMyAdmin and import this file.
 
 CREATE TABLE IF NOT EXISTS roles (
     role_id   INT AUTO_INCREMENT PRIMARY KEY,
@@ -100,7 +96,7 @@ CREATE TABLE IF NOT EXISTS indicators (
     project_id       INT NOT NULL,
     name             VARCHAR(150) NOT NULL,
     unit             VARCHAR(30) NOT NULL,
-    baseline         DECIMAL(12,2) NOT NULL DEFAULT 0,
+    baseline         DECIMAL(12) NOT NULL DEFAULT 0,
     target           DECIMAL(12,2) NOT NULL,
     reporting_period ENUM('Monthly','Quarterly','Annual') NOT NULL,
     CONSTRAINT fk_indicators_project FOREIGN KEY (project_id) REFERENCES projects (project_id) ON DELETE RESTRICT ON UPDATE CASCADE
@@ -130,9 +126,6 @@ CREATE TABLE IF NOT EXISTS audit_log (
     CONSTRAINT fk_audit_user FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- ------------------------------------------------------------------
--- Financial management
--- ------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS donors (
     donor_id       INT AUTO_INCREMENT PRIMARY KEY,
     name           VARCHAR(150) NOT NULL,
@@ -228,7 +221,7 @@ CREATE TABLE IF NOT EXISTS expenditures (
     CONSTRAINT fk_exp_app FOREIGN KEY (approved_by) REFERENCES users (user_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Donor/Partner users see only the projects assigned to them.
+-- .
 CREATE TABLE IF NOT EXISTS user_projects (
     user_id    INT NOT NULL,
     project_id INT NOT NULL,
