@@ -9,6 +9,9 @@ return [
 
     'app_name'     => 'NGO Project Monitoring and Evaluation System',
     'app_full_name' => 'NGO Project Monitoring and Evaluation System',
+    'platform_db_name' => 'ngo_platform',
+    'db_prefix' => '', 
+    'max_organizations' => 11,
     'currency'     => '₦',
     'variance_threshold' => 10,
     'timezone'     => 'Africa/Lagos',
