@@ -3,10 +3,7 @@ declare(strict_types=1);
 
 if (!defined('APP_ROOT')) { http_response_code(403); exit('Forbidden'); }
 
-/**
- * Write one entry to the audit log. The application has no screen or function
- * that edits or deletes audit entries.
- */
+
 function audit(string $action, ?string $table = null, ?int $recordId = null, string $details = '', ?int $userId = null): void
 {
     if ($userId === null && function_exists('current_user') && ($u = current_user())) {
@@ -19,3 +16,6 @@ function audit(string $action, ?string $table = null, ?int $recordId = null, str
         error_log('Audit log write failed: ' . $e->getMessage());
     }
 }
+
+
+
