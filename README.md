@@ -18,16 +18,6 @@ The NGO Project Monitoring and Evaluation System is a web-based application deve
   8. User and Access Management
   9. Audit and Accountability
 
- ##  Technology Stack
-The application is built using the following technologies:
-
-  PHP
-| MySQL
-| HTML5 
-| CSS3 
-| JavaScript 
-| Bootstrap 
-
 ## System Architecture
 
 The application follows a three-tier client-server architecture:
